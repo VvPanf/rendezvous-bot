@@ -5,7 +5,7 @@ class PgRepo:
         self.db_url = db_url
         with self.__get_conn() as con:
             with con.cursor() as cur:
-                with open('../sql/create.sql', 'r') as file:
+                with open('./sql/create.sql', 'r') as file:
                     cur.execute(file.read())
 
     def __get_conn(self):
